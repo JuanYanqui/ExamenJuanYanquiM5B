@@ -36,6 +36,10 @@ public class ControllerExamen {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {
             try {
+                resta.setPeriodo(r.getPeriodo());
+                resta.setYear(r.getYear());
+                resta.setListaCarreras(r.getListaCarreras());
+                resta.setDireccion(r.getDireccion());
                 resta.setDireccion(r.getDireccion());
                 resta.setCorreo(r.getCorreo());
                 return new ResponseEntity<>(repositoryExamen.save(r), HttpStatus.OK);
