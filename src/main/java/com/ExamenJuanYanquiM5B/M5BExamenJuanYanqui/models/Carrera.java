@@ -3,11 +3,13 @@ package com.ExamenJuanYanquiM5B.M5BExamenJuanYanqui.models;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Data
-@Document(collection = "Cliente")
-public class Cliente {
+@Document(collection = "Carrera")
+public class Carrera {
     private String nombre;
-    private String apellido;
-    private String cedula;
-    private String correo;
+    private String descripcion;
+
+    private List<Ciclo> ListaCiclos;
 }
